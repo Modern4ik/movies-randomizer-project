@@ -1,6 +1,60 @@
 .navbar {
-    height: 100px;
     width: 100vw;
     display: flex;
+    justify-content: space-between;
     background-color: black;
+}
+
+.navbar__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40vw;
+    margin-inline: 50px;
+}
+
+.navbar__item {
+    text-decoration: none;
+    padding: 15px 20px;
+    color: gold;
+    font-size: 24px;
+    border: 2px solid goldenrod;
+    border-radius: 15px;
+    transition: 0.2s;
+}
+
+.navbar__item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 5px goldenrod;
+}
+
+.navbar__logo_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px red solid;
+}
+
+.navbar__mainLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    text-decoration: none;
+    margin: 15px 50px;
+    border-radius: 15px;
+    font-size: 34px;
+    color: gold;
+    transition: 0.2s;
+}
+
+.navbar__mainLink:hover {
+    transform: scale(1.1);
+}
+
+.navbar__logo {
+    width: 100px;
+    height: 100px;
+    color: white;
+    cursor: pointer;
 }
