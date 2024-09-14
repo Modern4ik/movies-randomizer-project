@@ -20,7 +20,7 @@ const Navbar = () => {
 
       <div className={classes.navbar__items}>
         <Link className={classes.navbar__item} to="/random">
-          Randomise
+          Randomize
         </Link>
         <Link className={classes.navbar__item} to="/about">
           About

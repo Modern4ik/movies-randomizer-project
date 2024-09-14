@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     background-color: black;
+    box-shadow: 0px 1px 1px 1px goldenrod;
 }
 
 .navbar__items {
