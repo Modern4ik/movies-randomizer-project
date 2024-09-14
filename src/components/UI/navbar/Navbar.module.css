@@ -1,0 +1,6 @@
+.navbar {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    background-color: black;
+}
