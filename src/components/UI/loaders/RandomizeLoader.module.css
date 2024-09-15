@@ -1,0 +1,20 @@
+.randomizeLoader {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 50%;
+    border: 5px dashed gold;
+    box-shadow: 0px 0px 5px 5px goldenrod;
+    animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

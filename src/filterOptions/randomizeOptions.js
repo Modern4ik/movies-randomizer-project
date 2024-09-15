@@ -1,18 +1,24 @@
 export const typeOptions = [
-  { value: "film", name: "Film" },
-  { value: "cartoon", name: "Cartoon" },
-  { value: "serial", name: "Serial" },
-  { value: "anime", name: "Anime" },
+  { value: "movie", name: "Тип: Фильм" },
+  { value: "tv-series", name: "Тип: ТВ-Сериал" },
+  { value: "cartoon", name: "Тип: Мультфильм" },
+  { value: "animated-series", name: "Тип: Анимационный сериал" },
+  { value: "anime", name: "Тип: Анимэ" },
 ];
 
 export const jenreOptions = [
-    {value: 'action', name: 'Action'},
-    {value: 'drama', name: 'Drama'},
-    {value: 'comedy', name: 'Comedy'}
-]
+  { value: "боевик", name: "Боевик" },
+  { value: "драма", name: "Драма" },
+  { value: "комедия", name: "Комедия" },
+];
 
-export const scoreOptions = [
-    {value: '8+', name: '8+'},
-    {value: '5-8', name: '5 - 8'},
-    {value: '0-5', name: '0 - 5'}
-]
+export const ratingOptions = [
+  { value: "8 - 10", name: "Рейтинг: 8+" },
+  { value: "5 - 8", name: "Рейтинг: 5 - 8" },
+  { value: "0.1 - 5", name: "Рейтинг: 0 - 5" },
+];
+
+export const countOptions = [
+  { value: 1, name: 'Кол-во: 1'},
+  { value: 3, name: 'Кол-во: 3'}
+];

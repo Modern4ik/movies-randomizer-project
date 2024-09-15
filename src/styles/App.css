@@ -18,26 +18,13 @@
 
 form {
   display: flex;
-  margin-top: 100px;
+  width: max-content;
+  margin: auto;
+  margin-top: 85px;
   padding: 50px 50px;
   gap: 50px;
   background-color: white;
   border-radius: 15px;
   background-color: black;
   border: 2px solid goldenrod;
-}
-
-.option-enter {
-  opacity: 0;
-}
-.option-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-.option-exit {
-  opacity: 1;
-}
-.option-exit-active {
-  opacity: 0;
-  transition: opacity 500ms ease-in;
 }

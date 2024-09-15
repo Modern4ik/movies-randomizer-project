@@ -1,0 +1,29 @@
+.rnditem {
+  color: gold;
+  border: 2px solid goldenrod;
+  background: black;
+  padding: 15px;
+}
+
+.poster {
+  height: 350px;
+  width: 250px;
+  margin-top: 15px;
+  float: left;
+}
+
+.header {
+  max-width: max-content;
+}
+
+.description {
+  display: inline-block;
+  max-width: 250px;
+  font-size: 14px;
+  margin-left: 10px;
+  word-spacing: 3px;
+}
+
+.rating {
+    width: max-content;
+}

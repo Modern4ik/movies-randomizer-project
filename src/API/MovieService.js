@@ -2,34 +2,44 @@ import axios from "axios";
 const API_KEY = "63DX86Q-DQV4KAZ-MR1APN1-CW3KKVZ";
 
 export default class MovieService {
-  static async getRandomMovie(movieType, movieJenre) {
-    // const searchHeaders = {
-    //     "Content-Type": "application/json",
-    //       "X-API-KEY": API_KEY,
-    // }
-    // const searchParams = {
-    //     notNullFields: "poster.url",
-    //       type: "tv-series",
-    //       "genres.name": "боевик",
-    //       "rating.imdb": "5 - 8",
-    // }
+  static async getRandomMovie(movieType, movieJenre, movieRating, showCount) {
+    const searchHeaders = {
+      "Content-Type": "application/json",
+      "X-API-KEY": API_KEY,
+    };
+    const searchParams = {
+      notNullFields: ["poster.url", "description"],
+      type: movieType,
+      "genres.name": movieJenre,
+      "rating.kp": movieRating,
+    };
 
-    const response = await axios.get(
-      "https://api.kinopoisk.dev/v1.4/movie/random",
-      {
-        headers: {
-          "Content-Type": "application/json",
-          "X-API-KEY": API_KEY,
-        },
-        params: {
-          notNullFields: "poster.url",
-          type: "tv-series",
-          "genres.name": "боевик",
-          "rating.imdb": "5 - 8",
-        },
-      }
-    );
+    const requests = [];
 
-    console.log(response.data);
+    for (let i = 0; i < showCount; i++) {
+      requests.push(new Promise(async (resolve, reject) => {
+        const response = await axios.get(
+          "https://api.kinopoisk.dev/v1.4/movie/random",
+          {
+            headers: {
+              ...searchHeaders,
+            },
+            params: {
+              ...searchParams,
+            },
+    
+            paramsSerializer: {
+              indexes: null,
+            }
+          }
+        );
+
+        resolve(response.data);
+      }))
+    }
+
+    const responsesData = await Promise.all(requests);
+
+    return responsesData;
   }
 }
