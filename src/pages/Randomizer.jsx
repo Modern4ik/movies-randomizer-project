@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import RandomizeSelect from "../components/UI/selects/RandomizeSelect";
 import {
   countOptions,
@@ -18,9 +18,12 @@ const Randomizer = () => {
   const [countToShow, setCountToShow] = useState(0);
   const [isMoviesLoading, setIsMoviesLoading] = useState(false);
   const [movies, setMovies] = useState([]);
+  const [isPostersLoaded, setIsPostersLoaded] = useState(false);
 
   const loadMovies = async (event) => {
     event.preventDefault();
+
+    if (isPostersLoaded) setIsPostersLoaded(false);
 
     setIsMoviesLoading(true);
 
@@ -55,10 +58,10 @@ const Randomizer = () => {
         />
         <RandomizeButton
           onClick={loadMovies}
-          buttonText={"Get movies!"}
+          buttonText={"Подобрать!"}
         ></RandomizeButton>
       </form>
-      {isMoviesLoading ? <RandomizeLoader /> : <RandomizeList moviesData={movies} />}
+      {isMoviesLoading && !isPostersLoaded ? <RandomizeLoader /> : <RandomizeList moviesData={movies} loadFunc={setIsPostersLoaded}/>}
     </div>
   );
 };

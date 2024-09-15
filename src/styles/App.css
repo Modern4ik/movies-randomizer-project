@@ -16,6 +16,46 @@
   background-size: cover;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 32px;
+  color: gold;
+}
+
+.main-container__text {
+  margin-top: 20px;
+}
+
+.main-page__link {
+  text-decoration: none;
+  padding: 15px 20px;
+  width: max-content;
+  align-self: center;
+  color: gold;
+  background-color: black;
+  font-size: 24px;
+  border: 2px solid goldenrod;
+  border-radius: 15px;
+  transition: 0.2s;
+}
+
+.main-page__link:hover {
+  box-shadow: 0px 0px 10px 5px goldenrod;
+}
+
+.contacts {
+  color: gold;
+  font-size: 38px;
+  align-self: start;
+  margin-left: 50px;
+  margin-top: 100px;
+  line-height: 50px;
+}
+
 form {
   display: flex;
   width: max-content;

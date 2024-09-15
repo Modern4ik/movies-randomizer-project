@@ -17,25 +17,31 @@ export default class MovieService {
     const requests = [];
 
     for (let i = 0; i < showCount; i++) {
-      requests.push(new Promise(async (resolve, reject) => {
-        const response = await axios.get(
-          "https://api.kinopoisk.dev/v1.4/movie/random",
-          {
-            headers: {
-              ...searchHeaders,
-            },
-            params: {
-              ...searchParams,
-            },
-    
-            paramsSerializer: {
-              indexes: null,
-            }
-          }
-        );
+      requests.push(
+        new Promise(async (resolve, reject) => {
+          try {
+            const response = await axios.get(
+              "https://api.kinopoisk.dev/v1.4/movie/random",
+              {
+                headers: {
+                  ...searchHeaders,
+                },
+                params: {
+                  ...searchParams,
+                },
 
-        resolve(response.data);
-      }))
+                paramsSerializer: {
+                  indexes: null,
+                },
+              }
+            );
+
+            resolve(response.data);
+          } catch (error) {
+            reject(error);
+          }
+        })
+      );
     }
 
     const responsesData = await Promise.all(requests);

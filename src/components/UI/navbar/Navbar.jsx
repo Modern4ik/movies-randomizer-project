@@ -20,13 +20,13 @@ const Navbar = () => {
 
       <div className={classes.navbar__items}>
         <Link className={classes.navbar__item} to="/random">
-          Randomize
+          Подбор
         </Link>
         <Link className={classes.navbar__item} to="/about">
-          About
+          О Сайте
         </Link>
         <Link className={classes.navbar__item} to="/contacts">
-          Contacts
+          Контакты
         </Link>
       </div>
     </div>
