@@ -1,7 +1,6 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { routes } from "../routes/routes";
-import { CSSTransition } from 'react-transition-group';
 
 const AppRouter = () => {
     return (

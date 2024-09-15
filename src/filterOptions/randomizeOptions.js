@@ -10,6 +10,9 @@ export const jenreOptions = [
   { value: "боевик", name: "Боевик" },
   { value: "драма", name: "Драма" },
   { value: "комедия", name: "Комедия" },
+  { value: "ужасы", name: "Ужасы"},
+  { value: "мелодрама", name: "Мелодрама"},
+  { value: "документальный", name: "Документальный" }
 ];
 
 export const ratingOptions = [
