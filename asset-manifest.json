@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.e1b4944e.css",
-    "main.js": "/static/js/main.f6cf62fc.js",
-    "static/media/background.jpg": "/static/media/background.64e3e1ac33910824ffe0.jpg",
-    "index.html": "/index.html",
-    "main.e1b4944e.css.map": "/static/css/main.e1b4944e.css.map",
-    "main.f6cf62fc.js.map": "/static/js/main.f6cf62fc.js.map"
+    "main.css": "/movies-randomizer-project/static/css/main.94a1dc0f.css",
+    "main.js": "/movies-randomizer-project/static/js/main.f6cf62fc.js",
+    "static/media/background.jpg": "/movies-randomizer-project/static/media/background.64e3e1ac33910824ffe0.jpg",
+    "index.html": "/movies-randomizer-project/index.html",
+    "main.94a1dc0f.css.map": "/movies-randomizer-project/static/css/main.94a1dc0f.css.map",
+    "main.f6cf62fc.js.map": "/movies-randomizer-project/static/js/main.f6cf62fc.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1b4944e.css",
+    "static/css/main.94a1dc0f.css",
     "static/js/main.f6cf62fc.js"
   ]
 }
