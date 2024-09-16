@@ -10,6 +10,7 @@ import RandomizeButton from "../components/UI/buttons/RandomizeButton";
 import RandomizeLoader from "../components/UI/loaders/RandomizeLoader";
 import MovieService from "../API/MovieService";
 import RandomizeList from "../components/RandomizeList";
+import ErrorAlert from "../components/UI/alerts/ErrorAlert";
 
 const Randomizer = () => {
   const [type, setType] = useState("");
@@ -19,12 +20,16 @@ const Randomizer = () => {
   const [isMoviesLoading, setIsMoviesLoading] = useState(false);
   const [movies, setMovies] = useState([]);
   const [isPostersLoaded, setIsPostersLoaded] = useState(false);
+  const [isNotChoosed, setIsNotChoosed] = useState(false);
 
   const loadMovies = async (event) => {
     event.preventDefault();
 
+    if (!type || !genre || !rating || !countToShow) return setIsNotChoosed(true);
+
     if (isPostersLoaded) setIsPostersLoaded(false);
 
+    setIsNotChoosed(false);
     setIsMoviesLoading(true);
 
     const moviesData = await MovieService.getRandomMovie(type, genre, rating, countToShow);
@@ -62,6 +67,7 @@ const Randomizer = () => {
         ></RandomizeButton>
       </form>
       {isMoviesLoading && !isPostersLoaded ? <RandomizeLoader /> : <RandomizeList moviesData={movies} loadFunc={setIsPostersLoaded}/>}
+      {isNotChoosed && <ErrorAlert errorText={"Пожалуйста, выберите все параметры!"} />}
     </div>
   );
 };
